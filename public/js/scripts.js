@@ -27,7 +27,7 @@ btnStart.addEventListener("click", function () {
     pointCount = 0;
     infoSection(0);
     console.log(pointCount);
-  }, 10000);
+  }, 11000);
 });
 
 //cộng điểm khi click vào circle
@@ -64,19 +64,21 @@ function startScreen(enable) {
 //vùng thông tin
 function infoSection(enable) {
   if(enable == 0)
-  {
-    point.textContent = 0;
-    time.textContent = 0;
+  {    
     sectionInfo.style.opacity = "0";
     setTimeout(() => {
       sectionInfo.style.display = "none";
-    }, 500);    
+      time.textContent = 10;
+      point.textContent = 0;
+    }, 500);
   }
   if (enable == 1) {
     sectionInfo.style.opacity = "1";
     sectionInfo.style.display = "flex";
     point.textContent = pointCount;
-    time.textContent++;
+    setTimeout(() => {
+      time.textContent--;
+    }, 1000);
   }
 }
 

@@ -3,6 +3,10 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+::selection{
+  background-color: #ffffff0e;
+}
+
 a:hover {
   color: #fff;
 }
@@ -86,7 +90,7 @@ a:hover {
   width: 5em;
   height: 5em;
   background-color: #343a40;
-  color: rgba(255, 255, 255, 0);
+  color: #ffffff00;
   font-weight: bold;
   font-size: 1em;
   border-radius: 100%;
