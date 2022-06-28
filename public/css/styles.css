@@ -51,13 +51,14 @@ a:hover {
   color: #06d6a0;
 }
 
-.section-info{
+.section-info {
   display: none;
   opacity: 0;
   transition: all 0.3s linear;
 }
 
-.time-info, .point-info {
+.time-info,
+.point-info {
   font-size: 1.3em;
   font-weight: bold;
   color: #fff;
@@ -68,7 +69,7 @@ a:hover {
   cursor: context-menu;
 }
 
-.time{
+.time {
   color: #f48c06;
 }
 
@@ -85,7 +86,7 @@ a:hover {
   width: 5em;
   height: 5em;
   background-color: #343a40;
-  color: #fff;
+  color: rgba(255, 255, 255, 0);
   font-weight: bold;
   font-size: 1em;
   border-radius: 100%;
@@ -97,24 +98,44 @@ a:hover {
 .circle:hover,
 .circle:focus {
   background-color: #fca2114d;
+  border-width: 10px;
+}
+
+.circle:active {
+  border-color: #fff;
 }
 
 .circle-red {
   border: 3px solid #e63946;
+  background-image: url(../images/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .circle-blue {
   border: 3px solid #0096c7;
+  background-image: url(../images/2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .circle-green {
   border: 3px solid #80ed99;
+  background-image: url(../images/3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .circle-orange {
   border: 3px solid #f48c06;
+  background-image: url(../images/4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .circle-black {
   border: 3px solid #001219;
+  background-image: url(../images/5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
