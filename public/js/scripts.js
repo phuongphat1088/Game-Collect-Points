@@ -32,10 +32,16 @@ btnStart.addEventListener("click", function () {
 
 //cộng điểm khi click vào circle
 circle.forEach((element) => {
-  element.addEventListener("click", function () {
+  function addPoint() {
     pointCount += parseInt(element.innerText);
     console.log(pointCount);
     element.style.display = "none";
+  }
+  element.addEventListener("click", function () {
+    addPoint();
+  });
+  element.addEventListener("contextmenu", function () {
+    addPoint();
   });
 });
 
