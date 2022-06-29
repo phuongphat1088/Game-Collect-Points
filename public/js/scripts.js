@@ -1,6 +1,6 @@
 const screen = document.querySelector(".screen");
 const sectionStart = document.querySelector(".section-start");
-const sectionInfo = document.querySelector(".section-info")
+const sectionInfo = document.querySelector(".section-info");
 const btnStart = document.querySelector(".start-btn");
 const textStart = document.querySelector(".start-text");
 const circle = document.querySelectorAll(".circle");
@@ -30,6 +30,20 @@ btnStart.addEventListener("click", function () {
   }, 11000);
 });
 
+//âm thanh sống động
+const playList = [
+  "/public/sound/moan20.mp3",
+  "/public/sound/moan4.mp3",
+  "/public/sound/moan5.mp3",
+  "/public/sound/moan8.mp3",
+  "/public/sound/moan9.mp3"
+];
+playListLength = playList.length;
+function playSound() {
+  let sound = new Audio(`${playList[getRandomInt(0, playListLength)]}`);
+  sound.play();
+}
+
 //cộng điểm khi click vào circle
 circle.forEach((element) => {
   function addPoint() {
@@ -38,9 +52,11 @@ circle.forEach((element) => {
     element.style.display = "none";
   }
   element.addEventListener("click", function () {
+    playSound();
     addPoint();
   });
   element.addEventListener("contextmenu", function () {
+    playSound();
     addPoint();
   });
 });
@@ -62,15 +78,14 @@ function startScreen(enable) {
   if (enable == 2) {
     sectionStart.style.opacity = "1";
     sectionStart.style.display = "flex";
-    textStart.innerHTML = `Bác đã được <span class="point">${pointCount}</span> điểm !`
+    textStart.innerHTML = `Bác đã được <span class="point">${pointCount}</span> điểm !`;
     btnStart.innerHTML = `<i class="fa-solid fa-rotate-left"></i>`;
   }
 }
 
 //vùng thông tin
 function infoSection(enable) {
-  if(enable == 0)
-  {    
+  if (enable == 0) {
     sectionInfo.style.opacity = "0";
     setTimeout(() => {
       sectionInfo.style.display = "none";
