@@ -32,11 +32,11 @@ btnStart.addEventListener("click", function () {
 
 //âm thanh sống động
 const playList = [
-  "/public/sound/moan20.mp3",
-  "/public/sound/moan4.mp3",
-  "/public/sound/moan5.mp3",
-  "/public/sound/moan8.mp3",
-  "/public/sound/moan9.mp3"
+  "https://github.com/phuongphat1088/Game-Collect-Points/raw/main/public/sound/moan20.mp3",
+  "https://github.com/phuongphat1088/Game-Collect-Points/raw/main/public/sound/moan4.mp3",
+  "https://github.com/phuongphat1088/Game-Collect-Points/raw/main/public/sound/moan5.mp3",
+  "https://github.com/phuongphat1088/Game-Collect-Points/raw/main/public/sound/moan8.mp3",
+  "https://github.com/phuongphat1088/Game-Collect-Points/raw/main/public/sound/moan9.mp3"
 ];
 playListLength = playList.length;
 function playSound() {
